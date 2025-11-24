@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile - Toko Buku</title>
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(6px);
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        nav .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* HERO BACKGROUND (Tema perpustakaan) */
+        #home {
+            height: 100vh;
+            background: url('https://i.ibb.co/rZ3yM39/library-bg.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #000;
+            background-blend-mode: darken;
+            padding: 60px 20px;
+        }
+
+        #home h1 {
+            font-size: 45px;
+            text-shadow: 3px 3px 10px black;
+        }
+
+        #home p {
+            font-size: 18px;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        /* SECTION STYLE */
+        section {
+            padding: 90px 25px;
+            background: rgba(0,0,0,0.65);
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        /* ABOUT */
+        #about p {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        /* SERVICE */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact i {
+            font-size: 22px;
+            margin-right: 10px;
+            color: #ffd369;
+        }
+
+        footer {
+            background: rgba(0,0,0,0.6);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Toko Buku</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+        <div>
+            <h1>Selamat Datang di Toko Buku</h1>
+            <p>Temukan berbagai koleksi buku terbaik untuk memperluas wawasan Anda.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>
+            Toko Buku kami menyediakan berbagai jenis buku mulai dari buku pelajaran, novel, komik, 
+            buku motivasi, buku anak, dan masih banyak lagi.  
+            Kami berkomitmen untuk menyediakan bacaan yang berkualitas dan terjangkau untuk semua kalangan.
+        </p>
+    </section>
+
+    <!-- SERVICE -->
+    <section id="service">
+        <h2>Layanan Kami</h2>
+
+        <div class="services">
+            <div class="card">
+                <h3>Penjualan Buku</h3>
+                <p>Berbagai jenis buku untuk semua usia dan kebutuhan.</p>
+            </div>
+
+            <div class="card">
+                <h3>Rekomendasi Buku</h3>
+                <p>Kami memberikan rekomendasi berdasarkan minat Anda.</p>
+            </div>
+
+            <div class="card">
+                <h3>Pre-Order Buku Baru</h3>
+                <p>Dapatkan buku terbaru sebelum rilis resmi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+
+        <div class="contact">
+            <p><i class="fa-brands fa-instagram"></i> Instagram: <b>ffaz-faa</b></p>
+            <p><i class="fa-solid fa-envelope"></i> Email: <b>miftah@gmail.com</b></p>
+            <p><i class="fa-solid fa-phone"></i> Telp: <b>082311546013</b></p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Toko Buku – All Rights Reserved.
+    </footer>
+
+</body>
+</html>
+
+    
