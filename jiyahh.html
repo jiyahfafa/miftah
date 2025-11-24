@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Buku</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+        }
+
+        /* Background Perpustakaan */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1950&q=80') 
+                        no-repeat center/cover;
+            height: 100vh;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.55);
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+        }
+
+        .judul {
+            font-size: 52px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 25vh;
+            position: relative;
+            z-index: 10;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(0,0,0,0.7);
+        }
+
+        /* Section */
+        .section {
+            padding: 90px 40px;
+            background: #1b1b1b;
+        }
+
+        .section h2 {
+            color: #f0c75e;
+            font-size: 40px;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: #2c2c2c;
+            padding: 25px;
+            border-radius: 14px;
+            width: 30%;
+            border: 1px solid #f0c75e77;
+        }
+
+        .service-card h3 {
+            color: #f0c75e;
+        }
+
+        /* Contact */
+        .contact-info {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #f0c75e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HOME -->
+    <div class="hero" id="home">
+        <div class="overlay"></div>
+
+        <nav>
+            <div style="font-size: 26px; font-weight: 700; color: #f0c75e;">Perpustakaan Buku</div>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <div class="judul">Selamat Datang di Perpustakaan Buku</div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>
+            Perpustakaan Buku adalah tempat yang menyediakan koleksi buku lengkap dan berkualitas, 
+            mulai dari fiksi, non-fiksi, referensi, hingga buku pendidikan. Kami mendukung literasi dan 
+            pembelajaran bagi semua kalangan dengan suasana nyaman dan akses yang mudah.
+        </p>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="section" id="services">
+        <h2>Services</h2>
+
+        <div class="services">
+            <div class="service-card">
+                <h3>📚 Koleksi Lengkap</h3>
+                <p>Koleksi buku dari berbagai genre untuk memenuhi kebutuhan literasi dan referensi Anda.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>💻 Digital Library</h3>
+                <p>Akses e-book dan materi digital untuk pembelajaran dan riset secara online.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🏫 Program Edukasi</h3>
+                <p>Workshop, diskusi, dan kegiatan literasi untuk semua umur di perpustakaan kami.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+        <h2>Contact</h2>
+        <p>Hubungi kami untuk informasi lebih lanjut atau bergabung dengan program literasi kami.</p>
+
+        <div class="contact-info">
+            <p><i class="fa-solid fa-phone"></i> 0823-1154-6013</p>
+            <p><i class="fa-solid fa-envelope"></i> miftah@gmail.com</p>
+            <p><i class="fa-brands fa-instagram"></i> @ffaz-faa</p>
+        </div>
+    </div>
+
+</body>
+</html>
