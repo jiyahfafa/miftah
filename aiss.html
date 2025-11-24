@@ -1,196 +1,171 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Supermarket</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Buku</title>
 
-  <!-- Font Awesome untuk ikon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      color: #fff;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        /* Background Perpustakaan */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1950&q=80') 
+                        no-repeat center/cover;
+            height: 100vh;
+            position: relative;
+        }
 
-    /* Hero dengan background supermarket */
-    .hero {
-      background: url('https://images.unsplash.com/photos/X6xb30G6hNI?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
-      /* Gambar supermarket dari Unsplash */  
-      height: 100vh;
-      position: relative;
-    }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.55);
+        }
 
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.45);
-    }
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 10;
+            position: relative;
+        }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      position: relative;
-      z-index: 10;
-    }
+        nav a {
+            color: #fff;
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+        }
 
-    nav .logo {
-      font-size: 28px;
-      font-weight: 700;
-      color: #4caf50;
-    }
+        .judul {
+            font-size: 52px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 25vh;
+            position: relative;
+            z-index: 10;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(0,0,0,0.7);
+        }
 
-    nav a {
-      margin-left: 30px;
-      font-size: 17px;
-      font-weight: 500;
-      color: #fff;
-    }
+        /* Section */
+        .section {
+            padding: 90px 40px;
+            background: #1b1b1b;
+        }
 
-    .judul {
-      position: relative;
-      z-index: 10;
-      text-align: center;
-      margin-top: 30vh;
-      font-size: 50px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
-    }
+        .section h2 {
+            color: #f0c75e;
+            font-size: 40px;
+        }
 
-    .section {
-      padding: 80px 40px;
-      background: #1b1b1b;
-    }
+        /* Services */
+        .services {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
 
-    .section h2 {
-      color: #4caf50;
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
+        .service-card {
+            background: #2c2c2c;
+            padding: 25px;
+            border-radius: 14px;
+            width: 30%;
+            border: 1px solid #f0c75e77;
+        }
 
-    .section p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #ccc;
-    }
+        .service-card h3 {
+            color: #f0c75e;
+        }
 
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 30px;
-      justify-content: space-between;
-    }
+        /* Contact */
+        .contact-info {
+            margin-top: 20px;
+            font-size: 18px;
+        }
 
-    .service-card {
-      background: #2c2c2c;
-      border: 1px solid rgba(76, 175, 80, 0.7);
-      border-radius: 12px;
-      padding: 25px;
-      flex: 1 1 30%;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .service-card h3 {
-      color: #4caf50;
-      margin-bottom: 12px;
-    }
-
-    .contact-info {
-      margin-top: 25px;
-      font-size: 18px;
-      line-height: 2;
-    }
-
-    .contact-info i {
-      margin-right: 10px;
-      color: #4caf50;
-    }
-
-    @media (max-width: 900px) {
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
-      .service-card {
-        width: 80%;
-      }
-    }
-  </style>
+        .contact-info i {
+            margin-right: 10px;
+            color: #f0c75e;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- HOME -->
-  <div class="hero" id="home">
-    <div class="overlay"></div>
-    <nav>
-      <div class="logo">Supermarket</div>
-      <div>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-    <div class="judul">Belanja Praktis & Terpercaya</div>
-  </div>
+    <!-- HOME -->
+    <div class="hero" id="home">
+        <div class="overlay"></div>
 
-  <!-- ABOUT -->
-  <div class="section" id="about">
-    <h2>About Us</h2>
-    <p>
-      Kami adalah supermarket modern yang menyediakan berbagai kebutuhan rumah tangga, bahan makanan segar, dan barang harian lainnya.  
-      Dengan tata letak toko yang rapi, staf profesional, dan layanan yang ramah, belanja di tempat kami akan menjadi pengalaman yang menyenangkan dan efisien.
-    </p>
-  </div>
+        <nav>
+            <div style="font-size: 26px; font-weight: 700; color: #f0c75e;">Perpustakaan Buku</div>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
 
-  <!-- SERVICES -->
-  <div class="section" id="services">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>🛒 Produk Lengkap</h3>
-        <p>Kami menyediakan berbagai macam produk mulai dari bahan makanan segar, minuman, hingga kebutuhan rumah tangga lainnya.</p>
-      </div>
-      <div class="service-card">
-        <h3>🚚 Pengiriman Cepat</h3>
-        <p>Layanan delivery agar belanja Anda sampai di rumah dengan cepat dan dalam kondisi terbaik.</p>
-      </div>
-      <div class="service-card">
-        <h3>💳 Promo & Diskon</h3>
-        <p>Banyak promo menarik dan potongan harga untuk produk unggulan setiap minggunya.</p>
-      </div>
+        <div class="judul">Selamat Datang di Perpustakaan Buku</div>
     </div>
-  </div>
 
-  <!-- CONTACT -->
-  <div class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Hubungi kami untuk pemesanan, pertanyaan, atau keperluan lain.</p>
-    <div class="contact-info">
-      <p><i class="fa-solid fa-phone"></i> 0838‑6658‑2178</p>
-      <p><i class="fa-solid fa-envelope"></i> ais@gmail.com</p>
-      <p><i class="fa-brands fa-instagram"></i> @aisyaa_22</p>
+    <!-- ABOUT -->
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>
+            Perpustakaan Buku adalah tempat yang menyediakan koleksi buku lengkap dan berkualitas, 
+            mulai dari fiksi, non-fiksi, referensi, hingga buku pendidikan. Kami mendukung literasi dan 
+            pembelajaran bagi semua kalangan dengan suasana nyaman dan akses yang mudah.
+        </p>
     </div>
-  </div>
+
+    <!-- SERVICES -->
+    <div class="section" id="services">
+        <h2>Services</h2>
+
+        <div class="services">
+            <div class="service-card">
+                <h3>📚 Koleksi Lengkap</h3>
+                <p>Koleksi buku dari berbagai genre untuk memenuhi kebutuhan literasi dan referensi Anda.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>💻 Digital Library</h3>
+                <p>Akses e-book dan materi digital untuk pembelajaran dan riset secara online.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🏫 Program Edukasi</h3>
+                <p>Workshop, diskusi, dan kegiatan literasi untuk semua umur di perpustakaan kami.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+        <h2>Contact</h2>
+        <p>Hubungi kami untuk informasi lebih lanjut atau bergabung dengan program literasi kami.</p>
+
+        <div class="contact-info">
+            <p><i class="fa-solid fa-phone"></i> 0838-6658-2178</p>
+            <p><i class="fa-solid fa-envelope"></i> aiss@gmail.com</p>
+            <p><i class="fa-brands fa-instagram"></i> @aiss_22</p>
+        </div>
+    </div>
 
 </body>
 </html>
